@@ -85,11 +85,3 @@ const main = () => {
 };
 
 main();
-
-// Send (POST) //
-// Send message to server with a "last updated" timestamp  // {message: "", lastUpdated: ""}
-    // Server sends back list of messages since current UTC time with a "last updated" UTC timestamp  // {messages: [], lastUpdated: ""}
-
-// Refresh (GET) //
-// Send a "last updated" timestamp // {lastUpdated: ""}
-    // Server sends back list of messages since current UTC time with a "last updated" UTC timestamp  // {messages: [], lastUpdated: ""}
