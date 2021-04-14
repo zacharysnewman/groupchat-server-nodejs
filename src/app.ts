@@ -37,17 +37,16 @@ const saveMessages = () => {
 };
 
 const onClientRefresh = (req: express.Request, res: express.Response) => {
-  console.log(onClientRefresh);
   serverSendResponse(res, messages);
 };
 
 const onClientSend = (req: express.Request, res: express.Response) => {
-  console.log("onClientSend");
   var text = req.header("text");
   var sender = req.header("sender");
   var clientMessage: ClientMessage | undefined = text && sender ? {text, sender} : undefined;
-  // var clientMessage: ClientMessage = JSON.parse(req.body);
+
   if(clientMessage) {
+    console.log(JSON.stringify(clientMessage));
     addClientMessage(clientMessage);
   }
   serverSendResponse(res, messages);
