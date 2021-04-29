@@ -77,8 +77,8 @@ const registerExitHandlers = () => {
 
 const main = () => {
   loadMessages();
-  app.get("/", onClientRefresh);
-  app.post("/", onClientSend);
+  app.get("/refresh", onClientRefresh);
+  app.get("/send", onClientSend);
   serverListen(port);
   registerExitHandlers();
 };
